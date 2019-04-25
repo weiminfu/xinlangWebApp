@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <title>新浪网</title>
+    <meta name="keywords" content="新浪新闻">
+    <meta name="description" content="新浪新闻是一个中文门户网站">
+
+    <!--import css-->
+    <link rel="stylesheet/less" href="cs/203.xinlangWebApp.less">
+    <script src="js/less-2.5.3.min.js"></script>
+
+    <!--rem & other-->
+    <script src="js/prefixfree.min.js"></script>
+    <script>
+        (function anonymous() {
+                    let computedREM=function computedREM() {
+                        let HTML=document.documentElement;
+                        let winW=HTML.clientWidth;
+                        let desW=640;
+                        if (winW >= desW){
+                            HTML.style.fontSize="100px";
+                            return;
+                        }
+                        HTML.style.fontSize=winW / desW * 100+"px";
+                    };
+                    computedREM();
+                    window.addEventListener('resize',computedREM);
+        })();
+    </script>
+</head>
+<body>
+<main class="mainBox">
+    <header class="headerBox">
+        <h1><i class="icon-logo"></i>新浪网</h1>
+        <a href="javascript:;" class="navMenu icon-menu"></a>
+        <a href="javascript:;" class="person icon-user"></a>
+        <a href="javascript:;" class="weather"></a>
+    </header>
+
+    <!--nav-->
+    <nav class="navBox clearfix">
+        <a href="#">新闻</a>
+        <a href="#">财经</a>
+        <a href="#">体育</a>
+        <a href="#">娱乐</a>
+        <a href="#">军事</a>
+        <a href="#">汽车</a>
+        <a href="#">科技</a>
+        <a href="#">视频</a>
+        <a href="#">美图</a>
+        <a href="#">NBA</a>
+        <a href="#">博客</a>
+    </nav>
+
+    <!--banner-->
+    <section class="swiper-container bannerBox">
+        <div class="swiper-wrapper">
+            <!--<div class="swiper-slide">
+                <img src="img/xinlang/1.jpg" alt="">
+                <p>只是内容标题</p>
+            </div>-->
+        </div>
+        <!-- 分页器 -->
+        <div class="swiper-pagination"></div>
+    </section>
+
+    <!--message-->
+    <section class="messageBox">
+        <div class="liveFlag"></div>
+        <section class="swiper-container messageCon">
+            <div class="swiper-wrapper">
+                <!--<div class="swiper-slide">
+                    <a href="#">xxx</a>
+                </div>-->
+            </div>
+        </section>
+    </section>
+
+    <!--news-->
+    <section class="newsBox ">
+        <ul class="container">
+            <li class="newsItem clearfix">
+                <img src="img/xinlang/news.jpg" alt="">
+                <h3>这是新浪新闻的标题内容这是新浪新闻的标题内容这是新浪新闻的标题内容这是新浪新闻的标题内容这是新浪新闻的标题内容这是新浪新闻的标题内容这是新浪新闻的标题内容</h3>
+                <span>20万 <i class="icon-comment"></i></span>
+            </li>
+            <li class="newsItem imgBox">
+                <h3>这是新浪三图新闻的标题内容</h3>
+                <div class="clearfix">
+                    <img src="img/xinlang/news.jpg" alt="">
+                    <img src="img/xinlang/news.jpg" alt="">
+                    <img src="img/xinlang/news.jpg" alt="">
+                </div>
+                <span>20万 <i class="icon-comment"></i></span>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<!--import js-->
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/204.xinlangWebApp.js"></script>
+</body>
+</html>
